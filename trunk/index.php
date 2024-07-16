@@ -1,15 +1,34 @@
 <?php 
 /*
-Plugin Name: Floating Action Button
+Plugin Name: Floating Action Button Extended
 Plugin URI: http://okapitech.in/wordpress-plugin-floating-action-button
 Description: Display the beautiful FAB (Floating Action Button) on your WordPress front-end.
-Version: 1.2.2
+Version: 1.2.2.1
 Author: Faraz Quazi
 Author URI: https://profiles.wordpress.org/farazify
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: floating-action-button
+
+Modifications by: Juan Camilo Rivera
+Maintainer URL: https://daydreamsdeveloper.com/ 
+Modification Date: 2024-07-16
+Plugin with Modifications URL: https://github.com/DaydreamsDev/floating-action-button-extended
+
 */
+
+/* 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * 
+ */
 
 define('FZ_FAB_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('FZ_FAB_PLUGIN_PATH', plugin_dir_path(__FILE__));

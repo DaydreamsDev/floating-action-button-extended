@@ -3,8 +3,8 @@ Contributors: farazify
 Donate link: https://www.paypal.me/farazify
 Tags: fab, Floating Action Button, buttons for front-end, text button, whatsapp button, facebook messenger button, phone button, email button, viber button, snapchat button, line button, intercom button
 Requires at least: 3.7
-Tested up to: 6.4
-Stable tag: 1.2.2
+Tested up to: 6.5.5
+Stable tag: 1.2.2.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,12 @@ You can use Intercom App ID
 4. screenshot-4.png - Sub Buttons Settings
 
 == Changelog ==
+
+= 1.2.2.1 =
+* Updated WhatsApp Click to Chat Button.
+    * Translated WhatsApp button to Spanish.
+    * WhatsApp HTML tag change from link <a> to <button>.
+    * WhatsApp style change to include the text of each button.
 
 = 1.2.2 =
 * Security fixes.

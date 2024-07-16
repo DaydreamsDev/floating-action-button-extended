@@ -85,31 +85,42 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
 .fz-fab-buttons:hover{
     box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.20) !important;
 }
-.fz-fab-buttons.fz-fab-primary{
+.fz-fab-buttons.fz-fab-primary {
     box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.20) !important;
-    border-radius: 100% !important;
-    display: block !important;
-    width: 64px !important;
-    height: 64px !important;
-    margin: 10px auto 0 !important;
+    border-radius: 50% !important;
+    width: 64px !important; /* Fixed width */
+    height: 64px !important; /* Fixed height */
+    box-sizing: border-box !important; /* Include padding and border in element's total width and height */
+    display: flex !important;
+	align-items: center !important; /* Center items vertically */
+    justify-content: flex-start !important; /* Align items to the left */
+    margin: 10px 0 0 0 !important;
     position: relative !important;
     -webkit-transition: all .1s ease-out !important;
     transition: all .1s ease-out !important;
     text-align: center !important;
-    font-size: 28px !important;
+    font-size: 0 !important; /* Remove any text affecting size */
     z-index: 999 !important;
+    padding: 0 !important; /* Ensure no padding */
+    border: none !important; /* Ensure no border */
 }
-.fz-fab-buttons.fz-fab-primary img{
+
+.fz-fab-buttons.fz-fab-primary img {
     border-radius: 50% !important;
-    width: 64px !important;
-    height: 64px !important;
+    width: 100% !important; /* Match button width */
+    height: 100% !important; /* Match button height */
+    margin: 0 8px 0 0 !important; /* Space between image and text */
+    padding: 0 !important; /* Remove any padding */
+    object-fit: cover; /* Ensure the image covers the button area */
+    box-sizing: border-box !important; /* Include padding and border in the size calculation */
 }
+
 .fz-fab-buttons.fz-fab-secondary{
     box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.20) !important;
-    border-radius: 100% !important;
-    display: block !important;
-    width: 48px !important;
-    height: 48px !important;
+    display: none !important;
+	pointer-events: none !important; /* Disable click interactions */
+    width: 240px !important;
+    height: 64px !important;
     margin: auto !important;
     position: relative !important;
     text-align: center !important;
@@ -119,11 +130,17 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
     transition: all .1s ease-out !important;
     -webkit-transition: all 0.1s ease-out !important;
     -ms-transition: all 0.1s ease-out !important;
+	overflow: hidden !important;
+    white-space: nowrap !important;
+	align-items: center !important; /* Center items vertically */
+	justify-content: left !important; /* Center items horizontally */
+	text-overflow: ellipsis !important;
 }
 .fz-fab-buttons.fz-fab-secondary img{
     width: 48px !important;
     height: 48px !important;
     border-radius: 50% !important;
+	margin: 0px 10px 0px 0px
 }
 .fz-fab-active .fz-fab-buttons.fz-fab-secondary{
     transform: none !important;
@@ -131,6 +148,9 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
     -ms-transform: none !important;
     opacity: 1 !important;
     margin: 7px auto 0px !important;
+	display: flex !important;
+    pointer-events: auto !important; /* Enable click interactions */
+	background-color: #27d045;
 }
 .fz-fab-box{
     width: auto !important; 
@@ -176,9 +196,9 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
 
 <nav class="fz-fab-container"> 
 	<?php if($position == '1' || $position == '2'): ?>
-	    <a href="javascript: void(0);" class="fz-fab-buttons fz-fab-primary" style="display: none; background-color: <?php esc_html_e($main_bg_color) ?> !important; color: <?php esc_html_e($main_color) ?> !important;">
+	    <button class="fz-fab-buttons fz-fab-primary" style="display: none; background-color: <?php esc_html_e($main_bg_color) ?> !important; color: <?php esc_html_e($main_color) ?> !important;">
 	    	<img src="<?php esc_html_e($main_img_src) ?>">
-	    </a>
+	    </button>
 	<?php endif; ?>    
 
 	<?php if(is_array($fz_fab_sub_btns) && count($fz_fab_sub_btns) > 0): ?>
@@ -192,16 +212,16 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     $image_src = FZ_FAB_DEFAULT_IMG;
                 }
             ?>
-            <a id="fz-fab-btn-<?php echo $i; ?>" data-id="<?php echo $i; ?>" title="<?php esc_html_e($title) ?>" href="javascript: void(0);" class="fz-fab-buttons fz-fab-secondary">
+            <button id="fz-fab-btn-<?php echo $i; ?>" data-id="<?php echo $i; ?>" title="<?php esc_html_e($title) ?>" class="fz-fab-buttons fz-fab-secondary">
                 <img src="<?php esc_html_e($image_src) ?>" style="color: <?php esc_html_e($color) ?> !important; background-color: <?php esc_html_e($bg_color) ?> !important;">
-			</a>
+			<?php esc_html_e($title) ?> </button>
 		<?php endforeach; ?>	
 	<?php endif; ?>	
 
 	<?php if($position == '3' || $position == '4'): ?>
-	    <a href="javascript: void(0);" class="fz-fab-buttons fz-fab-primary" style="display: none; background-color: <?php esc_html_e($main_bg_color) ?> !important; color: <?php esc_html_e($main_color) ?> !important;">
+	    <button class="fz-fab-buttons fz-fab-primary" style="display: none; background-color: <?php esc_html_e($main_bg_color) ?> !important; color: <?php esc_html_e($main_color) ?> !important;">
 	    	<img src="<?php esc_html_e($main_img_src) ?>">
-	    </a>
+	    </button>
 	<?php endif; ?>
 </nav>
 
@@ -246,11 +266,11 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
 							$number = $content;
 							$invalid_array = array(' ', '+', '-', '(', ')', '{', '}', '[', ']');
 							$number = str_replace($invalid_array, '', $number);
-							$whatsapp_url = 'https://wa.me/'.$number.'?text=Hi';
+							$whatsapp_url = 'https://wa.me/'.$number;
 						?>
                         <div style="display: block; margin-bottom: 32px; text-align: center; font-size: 16px; font-weight: bold;">
                             <p>
-                                <?php esc_html_e('WhatsApp Number', 'floating-action-button'); ?>
+                                <?php esc_html_e('WhatsApp de '.$title, 'floating-action-button'); ?>
                             </p>
                             <p>
                                 <?php esc_html_e($content, 'floating-action-button'); ?>
@@ -258,7 +278,7 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                         </div>
                         <div style="color: <?php esc_html_e($bg_color) ?>; text-align: center; font-size: 18px;">
                             <a href="<?php esc_html_e($whatsapp_url) ?>" target="_blank" style="padding: 10px 15px; border-radius: 3px; background-color: <?php esc_html_e($bg_color) ?>; color: <?php esc_html_e($color) ?>; text-decoration: none;">
-                                <?php esc_html_e('Message', 'floating-action-button'); ?>
+                                <?php esc_html_e('Ir a WhatsApp', 'floating-action-button'); ?>
                             </a>
                         </div>
                     <?php elseif($type == 'messenger'): ?>

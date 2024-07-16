@@ -1,0 +1,9 @@
+
+.fz-fab-container:hover .fz-fab-buttons.fz-fab-secondary{
+    transform: none !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    opacity: 1 !important;
+    margin: 7px auto 0px !important;
+}
+

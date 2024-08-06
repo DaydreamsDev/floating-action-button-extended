@@ -23,20 +23,20 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
     <div id="wpbody-content" aria-label="Main content" tabindex="0">
         <div class="wrap" style="padding-bottom: 300px;">
             <h1 class="wp-heading-inline">
-            	<?php _e('FAB (Floating Action Button)', 'floating-action-button'); ?>
+            	<?php _e('Botón Flotante', 'floating-action-button'); ?>
             </h1>
             <table class="widefat">
                 <thead>
                     <tr>
                         <th colspan="2">
-                            <h1><?php _e('Basic Settings', 'floating-action-button'); ?></h1>
+                            <h1><?php _e('Configuración Básica', 'floating-action-button'); ?></h1>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Activate', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Activar', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td>
                             <select id="fz-fab-activate" class="fz-form-element">
@@ -47,7 +47,7 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     </tr>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Button Position', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Posición', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td>
                             <select id="fz-fab-position" class="fz-form-element">
@@ -60,7 +60,7 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     </tr>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Button Type', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Tipo', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td>
                             <select id="fz-fab-type" class="fz-form-element">
@@ -75,20 +75,20 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                 <thead>
                     <tr>
                         <td colspan="3">
-                            <h1><?php _e('Main Button Settings', 'floating-action-button'); ?></h1>
+                            <h1><?php _e('Configuración Botón Principal', 'floating-action-button'); ?></h1>
                         </td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Button Icon', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Icono', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td class="fz-td-2">
                             <button id="fz-fab-main-btn-icon" data-id="<?php esc_html_e($main_img_id) ?>" class="button button-small button-seconday">
-                                <?php _e('Select Icon', 'floating-action-button'); ?> 
+                                <?php _e('Seleccionar Icono', 'floating-action-button'); ?> 
                             </button>
-                            <small class="fz-fab-small"><?php _e('Size 128x128 px', 'floating-action-button'); ?></small>
+                            <small class="fz-fab-small"><?php _e('128px 128px', 'floating-action-button'); ?></small>
                         </td>
                         <td rowspan="3" style="vertical-align: middle;">
                             <img src="<?php esc_html_e($main_img_src) ?>" id="fz-fab-main-btn-preview-img" style="background-color: <?php esc_html_e($main_bg_color) ?>; color: <?php esc_html_e($main_color) ?>;">
@@ -96,7 +96,7 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     </tr>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Icon Color', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Color', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td class="fz-td-2">
                             <input id="fz-fab-main-btn-color" value="<?php esc_html_e($main_color) ?>">
@@ -104,7 +104,7 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     </tr>
                     <tr>
                         <td class="fz-td-1">
-                            <?php _e('Background Color', 'floating-action-button'); ?> <span class="required">*</span>	
+                            <?php _e('Color Fondo', 'floating-action-button'); ?> <span class="required">*</span>	
                         </td>
                         <td class="fz-td-2">
                             <input id="fz-fab-main-btn-bg-color" value="<?php esc_html_e($main_bg_color) ?>">
@@ -116,15 +116,15 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                 <thead>
                     <tr>
                         <th colspan="8">
-                            <h1><?php _e('Sub Buttons Settings', 'floating-action-button'); ?></h1>
+                            <h1><?php _e('Configuración Botones Internos', 'floating-action-button'); ?></h1>
                         </th>
                     </tr>
                     <tr>
-                        <th><?php _e('Title', 'floating-action-button'); ?> <span class="required">*</span></th>
-                        <th><?php _e('Content', 'floating-action-button'); ?> <span class="required">*</span></th>
-                        <th><?php _e('Button Icon', 'floating-action-button'); ?> <span class="required">*</span></th>
-                        <th><?php _e('Text Color', 'floating-action-button'); ?> <span class="required">*</span></th>
-                        <th><?php _e('Background Color', 'floating-action-button'); ?> <span class="required">*</span></th>
+                        <th><?php _e('Título', 'floating-action-button'); ?> <span class="required">*</span></th>
+                        <th><?php _e('Contenido', 'floating-action-button'); ?> <span class="required">*</span></th>
+                        <th><?php _e('Icono', 'floating-action-button'); ?> <span class="required">*</span></th>
+                        <th><?php _e('Color Texto', 'floating-action-button'); ?> <span class="required">*</span></th>
+                        <th><?php _e('Color Fondo', 'floating-action-button'); ?> <span class="required">*</span></th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -147,9 +147,9 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                                 </td>
                                 <td>
                                     <button data-id="<?php esc_html_e($img_id) ?>" class="button button-small button-secondary fz-fab-sub-btn-icons">
-                                        <?php _e('Select Icon', 'floating-action-button'); ?>
+                                        <?php _e('Seleccionar Icono', 'floating-action-button'); ?>
                                     </button>
-                                    <small class="fz-fab-small"><?php _e('Size 128x128 px', 'floating-action-button'); ?></small>
+                                    <small class="fz-fab-small"><?php _e('128px 128px', 'floating-action-button'); ?></small>
                                 </td>
                                 <td>
                                     <input class="fz-fab-sub-btn-colors" value="<?php esc_html_e($color) ?>">
@@ -199,60 +199,11 @@ $fz_fab_sub_btns = json_decode($fz_fab_sub_btns, TRUE);
                     <tr>
                         <td colspan="8">
                             <button id="save-changes-btn" class="button button-large button-primary">
-                                <?php _e('Save Changes', 'floating-action-button'); ?>
+                                <?php _e('Guardar Cambios', 'floating-action-button'); ?>
                             </button>
                         </td>
                     </tr>  
                 </tfoot>
-            </table>
-            <table class="widefat" style="margin-top: 40px;">
-                <thead>
-                    <tr>
-                        <td colspan="2">
-                            <h1><?php _e('Help for Content filed', 'floating-action-button'); ?></h1>
-                            <h3 style="color: #008EC2;"><?php _e('If you have any suggestion or want to free/paid support, feel free to contact me at contact2farazquazi@gmail.com', 'floating-action-button'); ?></h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Button Type', 'floating-action-button'); ?></b></td><td><b<?php _e('Content Description', 'floating-action-button'); ?>></b></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><b><?php _e('Text', 'floating-action-button'); ?></b></td><td><?php _e('Any type of simple text and shortcode.', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('WhatsApp', 'floating-action-button'); ?></b></td><td><?php _e('Any WhatsApp number like that 919806886806 (with country code but without any plus, preceding zero, hyphen, brackets, space)', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Facebook Messenger', 'floating-action-button'); ?></b></td><td><?php _e('Valid Facebook Page Slug', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Phone', 'floating-action-button'); ?></b></td><td><?php _e('Mobile number in this format +91-999-999-9999', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Email', 'floating-action-button'); ?></b></td><td><?php _e('Valid email address like xxxxx@yyyyy.com', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Viber', 'floating-action-button'); ?></b></td><td><?php _e('Viber Username', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Snapchat', 'floating-action-button'); ?></b></td><td><?php _e('Snapchat Username', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Line', 'floating-action-button'); ?></b></td><td><?php _e('Valid Line URL like http://line.me/ti/p/xxxxxx', 'floating-action-button'); ?></td>
-                    </tr>
-                    <tr>
-                        <td><b><?php _e('Intercom', 'floating-action-button'); ?></b></td><td><?php _e('App ID', 'floating-action-button'); ?></td>
-                    </tr>
-                </tbody>
-                <tbody>
-					<tr>
-						<td colspan="3">
-							<h3><?php _e('If you want only WhatsApp sticky button then use this plugin <a href="https://wordpress.org/plugins/wa-sticky-button" target="_blank">https://wordpress.org/plugins/wa-sticky-button</a>', 'floating-action-button'); ?></h3>
-						</td>
-					</tr>                	
-                </tbody>
             </table>
         </div>
     </div>
@@ -286,7 +237,7 @@ jQuery(document).on("click", "#save-changes-btn", function(){
 		status = false;
 	}
 	if(status == true){
-		jQuery("#save-changes-btn").html('Saving...');
+		jQuery("#save-changes-btn").html('Guardando...');
 		jQuery.ajax({
 	        type: "POST",
 	        url: "<?php echo get_admin_url(); ?>admin-ajax.php",
@@ -303,7 +254,7 @@ jQuery(document).on("click", "#save-changes-btn", function(){
 				"sub_settings": sub_settings,
 	        },
 	        success: function(res){
-				jQuery("#save-changes-btn").html('Save Changes');
+				jQuery("#save-changes-btn").html('Guardar Cambios');
 	        }
 	    });	
 	}
